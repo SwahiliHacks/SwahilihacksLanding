@@ -1,8 +1,10 @@
 .footer {
-  background: #0f172a;
-  color: #e5e7eb;
+  background: #ffffff;
+  color: #231F20;
   padding: 40px 20px;
   margin-top: 60px;
+  border-top: 1px solid #D1D3D4;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
@@ -14,39 +16,11 @@
 .footer h3 {
   margin-bottom: 15px;
   font-size: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #231F20;
 }
 
-.social-links a {
-  margin: 0 10px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
-}
-
-.contact p {
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-.contact a {
-  color: #22c55e;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-.copyright {
-  margin-top: 25px;
-  font-size: 13px;
-  color: #9ca3af;
-}
-
+/* Social icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -55,16 +29,17 @@
 }
 
 .social-icons a {
-  color: #38bdf8;
+  color: #1C75BC;
   font-size: 26px;
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .social-icons a:hover {
-  color: #22c55e;
+  color: #231F20;
   transform: translateY(-4px);
 }
 
+/* Contact section */
 .contact {
   margin-top: 20px;
   font-size: 14px;
@@ -80,14 +55,21 @@
 
 .contact i {
   font-size: 16px;
-  color: #38bdf8;
+  color: #1C75BC;
 }
 
 .contact a {
-  color: #e5e7eb;
+  color: #231F20;
   text-decoration: none;
 }
 
 .contact a:hover {
   text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #D1D3D4;
 }
