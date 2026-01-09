@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
 /* Footer */
 .footer {
   background: #0f172a;
-  color: #e5e7eb;
+  color: #ffffff;
   padding: 40px 20px;
   margin-top: 60px;
 }
@@ -144,8 +144,4 @@ h1, h2, h3, h4 {
   margin-top: 25px;
   font-size: 13px;
   color: #D1D3D4;
-}
-
-.footer-title {
-  color: #ffffff; /* make "Follow Swahili Hacks" white */
 }
