@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 
 .disclaimer {
   font-size: 14px;
-  color: #D1D3D4;
+  color: #231f20;
   margin-top: 20px;
 }
 
@@ -144,4 +144,8 @@ h1, h2, h3, h4 {
   margin-top: 25px;
   font-size: 13px;
   color: #D1D3D4;
+}
+
+.footer-title {
+  color: #ffffff; /* make "Follow Swahili Hacks" white */
 }
