@@ -491,3 +491,35 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
 }
+
+/* SH4 Image Styling */
+.sh4-image-container {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sh4-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sh4-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments for SH4 image */
+@media (max-width: 768px) {
+  .sh4-image-container {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  
+  .sh4-image {
+    max-width: 90%;
+  }
+}
