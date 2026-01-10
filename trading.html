@@ -1,3 +1,5 @@
+# Run this in PowerShell in your project folder
+$tradingHtml = @'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -556,3 +558,6 @@
 
 </body>
 </html>
+'@
+
+Set-Content -Path "trading.html" -Value $tradingHtml
