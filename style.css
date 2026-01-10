@@ -492,12 +492,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* SH4 Image Styling */
+/* SH4 Image Styling for wide images (1x3 ratio) */
 .sh4-image-container {
   margin-top: 2rem;
   text-align: center;
   padding: 1rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  overflow: hidden;
 }
 
 .sh4-image {
@@ -506,6 +508,20 @@ html {
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain; /* This maintains aspect ratio */
+}
+
+/* For very wide images (1x3 ratio), limit height */
+.sh4-image-container.wide-image {
+  max-height: 150px; /* Adjust based on your preference */
+}
+
+.sh4-image-container.wide-image .sh4-image {
+  max-height: 150px;
+  width: auto;
+  max-width: 100%;
 }
 
 .sh4-image:hover {
@@ -521,5 +537,23 @@ html {
   
   .sh4-image {
     max-width: 90%;
+  }
+  
+  .sh4-image-container.wide-image {
+    max-height: 100px;
+  }
+  
+  .sh4-image-container.wide-image .sh4-image {
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sh4-image-container.wide-image {
+    max-height: 80px;
+  }
+  
+  .sh4-image-container.wide-image .sh4-image {
+    max-height: 80px;
   }
 }
