@@ -62,11 +62,11 @@ h1, h2, h3, h4 {
 }
 
 .profile-header img {
-  width: 108px;   /* 72 × 1.5 = 108 */
-  height: 108px;
+  width: 216px;   /* Size doubled: 108 × 2 = 216 */
+  height: 216px;  /* Size doubled: 108 × 2 = 216 */
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #1C75BC;
+  border: 4px solid #1C75BC; /* Slightly thicker border */
 }
 
 .profile-header p {
@@ -94,7 +94,7 @@ h1, h2, h3, h4 {
 .footer h3 {
   margin-bottom: 15px;
   font-size: 20px;
-  color: #ffffff;  /* Full white for visibility */
+  color: #ffffff;
 }
 
 .social-icons {
@@ -105,7 +105,7 @@ h1, h2, h3, h4 {
 }
 
 .social-icons a {
-  color: #1C75BC; /* Brand primary */
+  color: #1C75BC;
   font-size: 26px;
   transition: transform 0.25s ease, color 0.25s ease;
 }
@@ -130,7 +130,7 @@ h1, h2, h3, h4 {
 
 .contact i {
   font-size: 16px;
-  color: #1C75BC; /* Brand primary */
+  color: #1C75BC;
 }
 
 .contact a {
@@ -151,7 +151,7 @@ h1, h2, h3, h4 {
 /* Tools Grid Layout */
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
@@ -185,18 +185,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 10px 30px rgba(28, 117, 188, 0.15);
 }
 
-@media (max-width: 900px) {
-  .tools-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -221,10 +209,15 @@ h1, h2, h3, h4 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* Removed the white overlay completely and made overlay more transparent */
+.tool-card::before {
+  display: none; /* Remove the semi-transparent white overlay */
+}
+
 .tool-card .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.65); /* Reduced opacity from 0.85 to 0.65 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,7 +246,7 @@ h1, h2, h3, h4 {
 /* Tools Grid */
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Desktop 3x4 */
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 40px;
   text-align: center;
@@ -266,20 +259,9 @@ h1, h2, h3, h4 {
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #231F20; /* ensures text is readable */
+  color: #231F20;
   background-size: cover;
   background-position: center;
-}
-
-/* Overlay for readability */
-.tool-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.35); /* semi-transparent white overlay */
-  /* Optionally, add a slight dark layer for contrast: rgba(0,0,0,0.1) */
-  z-index: 0;
-  pointer-events: none;
 }
 
 .tool-card h3,
@@ -289,32 +271,31 @@ h1, h2, h3, h4 {
   z-index: 1;
 }
 
-/* Hover effect */
 .tool-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* Buttons inside cards */
 .tool-card .btn {
   margin-top: 12px;
 }
 
-/* --- Responsive --- */
-
-/* Tablets: 2 columns × 6 rows */
+/* Responsive */
 @media (max-width: 992px) {
   .tools-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Phones: 1 column × 12 rows */
 @media (max-width: 600px) {
   .tools-grid {
     grid-template-columns: 1fr;
   }
   .tool-card {
     padding: 18px;
+  }
+  .profile-header img {
+    width: 180px; /* Slightly smaller on mobile */
+    height: 180px;
   }
 }
