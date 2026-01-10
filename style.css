@@ -53,19 +53,20 @@ h1, h2, h3, h4 {
 /* Profile Header */
 .profile-header {
   display: flex;
+  flex-direction: column;   /* stack text then image */
   align-items: center;
-  gap: 16px;
   justify-content: center;
+  gap: 14px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .profile-header img {
-  width: 72px;
-  height: 72px;
+  width: 108px;   /* 72 × 1.5 = 108 */
+  height: 108px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #1C75BC; /* Brand blue */
-  flex-shrink: 0;
+  border: 3px solid #1C75BC;
 }
 
 .profile-header p {
